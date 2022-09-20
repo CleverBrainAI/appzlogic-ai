@@ -7,7 +7,7 @@ import tensorflow as tf
 
 
 import sys
-sys.path.append("..")
+# sys.path.append("..")
 
 # Import utilites
 from object_detection.utils import label_map_util
@@ -15,21 +15,21 @@ from object_detection.utils import visualization_utils as vis_util
 from flask import Flask, request, Response
 
 
-application = Flask(__name__)
+app = Flask(__name__)
 
 
-@application.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST'])
 def welcome():
     return 'Welcome'
 
 
-@application.route('/predict_image', methods=['GET','POST'])
+@app.route('/predict_image', methods=['GET','POST'])
 def predict_image():
 
     nparr = np.fromstring(request.data, np.uint8)
     image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
-    PATH_TO_CKPT = 'recent/frozen_inference_graph.pb'
+    PATH_TO_CKPT = 'frozen_inference_graph.pb'
     PATH_TO_LABELS = 'labelmap.pbtxt'
 
     NUM_CLASSES = 1
