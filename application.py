@@ -15,15 +15,15 @@
 from flask import Flask, request, Response
 
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/', methods=['GET','POST'])
+@application.route('/', methods=['GET','POST'])
 def welcome():
     return 'Welcome'
 
 
-# @app.route('/predict_image', methods=['GET','POST'])
+# @application.route('/predict_image', methods=['GET','POST'])
 # def predict_image():
 
 #     nparr = np.fromstring(request.data, np.uint8)
