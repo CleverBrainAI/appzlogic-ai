@@ -78,8 +78,8 @@ def predict_image():
        os.makedirs(predict_img_path) 
 
     img_name = predict_img_path + '/output_' + str(random.randint(1000,9999)) + '.jpg'
-     cv2.imwrite(img_name, image)
-     response = {'message': 'image received. size={}x{}'.format(image.shape[1], image.shape[0])
+    cv2.imwrite(img_name, image)
+    response = {'message': 'image received. size={}x{}'.format(image.shape[1], image.shape[0])
                 }
     
     response_pickled = jsonpickle.encode(response)
