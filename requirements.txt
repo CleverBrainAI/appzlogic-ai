@@ -3,3 +3,4 @@ numpy==1.19.5
 tensorflow==1.15.0
 Flask
 jsonpickle==2.2.0
+protobuf==3.19.4
