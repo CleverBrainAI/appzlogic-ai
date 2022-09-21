@@ -1,3 +1,4 @@
+opencv-python==4.1.2.30
 numpy==1.19.5
 Flask
 jsonpickle==2.2.0
