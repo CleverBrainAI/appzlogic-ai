@@ -78,7 +78,7 @@ def predict_image():
             use_normalized_coordinates=True,
             skip_scores=True,
             line_thickness=8,
-            min_score_thresh=0.6)
+            min_score_thresh=0.3)
 
         predict_img_path = 'pred' 
         if not os.path.exists(predict_img_path):
