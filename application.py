@@ -109,3 +109,5 @@ def predict_image():
         response_pickled = jsonpickle.encode(response)
         return Response(response=response_pickled, status=200, mimetype="application/json")
 
+
+    
