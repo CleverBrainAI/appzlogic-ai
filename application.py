@@ -85,7 +85,7 @@ def predict_image():
         _, img_encoded = cv2.imencode('.jpg', image)
         cv2.imwrite(img_name, image)
 
-        classes = [cls for cls in np.squeeze(classes).astype(np.int32) if max(np.squeeze(scores)) > 0.6]
+        classes = [cls for cls in np.squeeze(classes).astype(np.int32) if max(np.squeeze(scores)) > 0.3]
         classes = [category_index.get(cls)['name'] for cls in classes]
 
         if len(classes) > 0:
