@@ -1,5 +1,5 @@
-opencv-python==4.2.0.32
-opencv-python-headless==4.2.0.32
+opencv-python
+opencv-python-headless
 numpy==1.19.5
 tensorflow==1.15.0
 Flask
