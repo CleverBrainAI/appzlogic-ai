@@ -1,5 +1,5 @@
-opencv-python
-opencv-python-headless
+opencv-python==4.1.2.30
+opencv-python-headless==4.6.0.66
 opencv-contrib-python-headless
 numpy==1.19.5
 tensorflow==1.15.0
